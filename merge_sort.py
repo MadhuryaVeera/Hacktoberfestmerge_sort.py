@@ -9,7 +9,7 @@ def merge_sort(arr):
 
         i = j = k = 0
         while i < len(left) and j < len(right):
-            if left[i] > right[j]:  # ❌ Wrong comparison (descending)
+            if left[i] < right[j]:
                 arr[k] = left[i]
                 i += 1
             else:
@@ -26,4 +26,4 @@ def merge_sort(arr):
             k += 1
     return arr
 
-print(merge_sort([38, 27, 43, 3, 9, 82, 10]))  # Expected [3, 9, 10, 27, 38, 43, 82]
+print(merge_sort([38, 27, 43, 3, 9, 82, 10]))
